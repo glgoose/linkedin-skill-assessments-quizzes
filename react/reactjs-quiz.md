@@ -718,27 +718,37 @@ const Greeting ({ name }) > <h1>Hello {name}!</h1>;
 ```javascript
 class Greeting extends React.Component {
   constructor() {
-    return <h1>Hello (this.props.name)!</h1>;
+    return <h1>Hello {this.props.name}!</h1>;
   }
+}
+```
+
+- [ ]
+
+```javascript
+class Greeting extends React.Component { 
+  <h1>Hello {this.props.name}!</h1>; 
 }
 ```
 
 - [x]
 
 ```javascript
-    class Greeting extends React.Component { <h1>Hello {this.props.name}!</h1>; }
+class Greeting extends React.Component { 
+  render() {
+      return <h1>Hello {this.props.name}!</h1>; 
+  }
+}
 ```
 
 - [ ]
 
 ```javascript
-   class Greeting extends React.Component { return <h1>Hello (this.props.name) 1</h1>; }
-```
-
-- [ ]
-
-```javascript
-class Greeting extends React.Component ( render({ name }) {return <h1>Hello (name)} !</h1>;})
+class Greeting extends React.Component {
+  render({ name }) {
+    return <h1>Hello {name}!</h1>;
+  }
+}
 ```
 
 #### Q66. Give the code below, what does the second argument that is sent to the render function describe?
